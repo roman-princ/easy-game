@@ -1,5 +1,6 @@
 var character = document.getElementById("character");
 var block = document.getElementById("block");
+var counter = 0;
 function jump(){
     if(character.classList != "animate"){
         character.classList.add("animate");
@@ -15,6 +16,10 @@ var checkDead = setInterval(function(){
     if(blockLeft<20 && blockLeft>0 && characterTop>=110){
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Prohrál jsi! Pro nový pokus refreshni stránku")
+        alert("Prohrál jsi! Skóre: "+Math.floor(counter/100));
+        counter=0;
+    }else{
+        counter++;
+        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
     }
 },10)
