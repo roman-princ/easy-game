@@ -21,5 +21,6 @@ var checkDead = setInterval(function(){
     }else{
         counter++;
         document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+        
     }
 },10)
