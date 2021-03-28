@@ -16,5 +16,7 @@ var checkDead = setInterval(function(){
     if(blockLeft<20 && blockLeft>0 && characterTop>=140){
         block.style.animation = "none";
         block.style.display = "none";
+        alert("Prohrál jsi! Pro další pokus refreshni stránku !");
+       
     }
-    },10)
+},10)
