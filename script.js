@@ -13,14 +13,8 @@ function jump(){
 var checkDead = setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-    if(blockLeft<20 && blockLeft>10 && characterTop>=140){
+    if(blockLeft<20 && blockLeft>0 && characterTop>=140){
         block.style.animation = "none";
         block.style.display = "none";
-        alert("Prohrál jsi! Skóre: "+Math.floor(counter/100));
-        counter=0;
-    }else{
-        counter++;
-        document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
-        
     }
-},10)
+    },10)
